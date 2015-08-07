@@ -1,6 +1,6 @@
-var React = require( "react" );
-var DateUtil = require( "./util/date" );
-var moment = require( "moment" );
+import React from "react";
+import DateUtil from "./util/date";
+import moment from "moment";
 
 var DateInput = React.createClass( {
 

@@ -1,10 +1,10 @@
-var React = require( "react" );
-var Popover = require( "./popover" );
-var DateUtil = require( "./util/date" );
-var Calendar = require( "./calendar" );
-var DateInput = require( "./date_input" );
-var moment = require( "moment" );
-var _ = require( "lodash" );
+import React from 'react';
+import Popover from './popover';
+import DateUtil from "./util/date";
+import Calendar from "./calendar";
+import DateInput from "./date_input";
+import _ from "lodash";
+
 
 var DatePicker = React.createClass( {
 

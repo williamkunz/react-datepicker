@@ -1,7 +1,7 @@
-var React = require( "react" );
-var Day = require( "./day" );
-var DateUtil = require( "./util/date" );
-var _ = require( "lodash" );
+import React from 'react';
+import Day from "./day";
+import DateUtil from "./util/date";
+import _ from "lodash";
 
 var Calendar = React.createClass( {
   mixins: [ require( "react-onclickoutside" ) ],

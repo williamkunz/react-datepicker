@@ -125,5 +125,5 @@ module.exports = function( grunt ) {
 
   grunt.registerTask( "default", [ "watch", "scsslint" ] );
   grunt.registerTask( "travis", [ "jscs", "karma", "scsslint" ] );
-  grunt.registerTask( "build", [ "scsslint", "webpack", "sass" ] );
+  grunt.registerTask( "build", [ "webpack", "sass" ] );
 };

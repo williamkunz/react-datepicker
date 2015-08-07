@@ -54,25 +54,43 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
-	var React = __webpack_require__(1);
-	var Popover = __webpack_require__(2);
-	var DateUtil = __webpack_require__(4);
-	var Calendar = __webpack_require__(5);
-	var DateInput = __webpack_require__(10);
-	var moment = __webpack_require__(7);
-	var _ = __webpack_require__(8);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var DatePicker = React.createClass({
-	  displayName: "DatePicker",
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _popover = __webpack_require__(2);
+
+	var _popover2 = _interopRequireDefault(_popover);
+
+	var _utilDate = __webpack_require__(4);
+
+	var _utilDate2 = _interopRequireDefault(_utilDate);
+
+	var _calendar = __webpack_require__(5);
+
+	var _calendar2 = _interopRequireDefault(_calendar);
+
+	var _date_input = __webpack_require__(10);
+
+	var _date_input2 = _interopRequireDefault(_date_input);
+
+	var _lodash = __webpack_require__(8);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	var DatePicker = _react2['default'].createClass({
+	  displayName: 'DatePicker',
 
 	  propTypes: {
-	    weekdays: React.PropTypes.arrayOf(React.PropTypes.string),
-	    locale: React.PropTypes.string,
-	    dateFormatCalendar: React.PropTypes.string,
-	    onChange: React.PropTypes.func.isRequired,
-	    onBlur: React.PropTypes.func
+	    weekdays: _react2['default'].PropTypes.arrayOf(_react2['default'].PropTypes.string),
+	    locale: _react2['default'].PropTypes.string,
+	    dateFormatCalendar: _react2['default'].PropTypes.string,
+	    onChange: _react2['default'].PropTypes.func.isRequired,
+	    onBlur: _react2['default'].PropTypes.func
 	  },
 
 	  getDefaultProps: function getDefaultProps() {
@@ -101,7 +119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  shouldComponentUpdate: function shouldComponentUpdate(nextProps, nextState) {
-	    return !(_.isEqual(nextProps, this.props) && _.isEqual(nextState, this.state));
+	    return !(_lodash2['default'].isEqual(nextProps, this.props) && _lodash2['default'].isEqual(nextState, this.state));
 	  },
 
 	  getValue: function getValue() {
@@ -168,10 +186,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  calendar: function calendar() {
 	    if (this.state.focus) {
-	      return React.createElement(
-	        Popover,
+	      return _react2['default'].createElement(
+	        _popover2['default'],
 	        null,
-	        React.createElement(Calendar, {
+	        _react2['default'].createElement(_calendar2['default'], {
 	          weekdays: this.props.weekdays,
 	          locale: this.props.locale,
 	          moment: this.props.moment,
@@ -188,10 +206,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  render: function render() {
-	    return React.createElement(
-	      "div",
+	    return _react2['default'].createElement(
+	      'div',
 	      null,
-	      React.createElement(DateInput, {
+	      _react2['default'].createElement(_date_input2['default'], {
 	        name: this.props.name,
 	        date: this.state.selected,
 	        dateFormat: this.props.dateFormat,
@@ -226,9 +244,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 
-	var React = __webpack_require__(1);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	var Popover = React.createClass({
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var Popover = _react2["default"].createClass({
 	  displayName: "Popover",
 
 	  componentWillMount: function componentWillMount() {
@@ -250,7 +272,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  _popoverComponent: function _popoverComponent() {
 	    var className = this.props.className;
-	    return React.createElement(
+	    return _react2["default"].createElement(
 	      "div",
 	      { className: className },
 	      this.props.children
@@ -275,7 +297,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  _renderPopover: function _renderPopover() {
-	    React.render(this._popoverComponent(), this._popoverElement);
+	    _react2["default"].render(this._popoverComponent(), this._popoverElement);
 
 	    if (this._tether != null) {
 	      this._tether.setOptions(this._tetherOptions());
@@ -287,14 +309,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  componentWillUnmount: function componentWillUnmount() {
 	    this._tether.destroy();
-	    React.unmountComponentAtNode(this._popoverElement);
+	    _react2["default"].unmountComponentAtNode(this._popoverElement);
 	    if (this._popoverElement.parentNode) {
 	      this._popoverElement.parentNode.removeChild(this._popoverElement);
 	    }
 	  },
 
 	  render: function render() {
-	    return React.createElement("span", null);
+	    return _react2["default"].createElement("span", null);
 	  }
 	});
 
@@ -410,12 +432,25 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 
-	var React = __webpack_require__(1);
-	var Day = __webpack_require__(6);
-	var DateUtil = __webpack_require__(4);
-	var _ = __webpack_require__(8);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	var Calendar = React.createClass({
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _day = __webpack_require__(6);
+
+	var _day2 = _interopRequireDefault(_day);
+
+	var _utilDate = __webpack_require__(4);
+
+	var _utilDate2 = _interopRequireDefault(_utilDate);
+
+	var _lodash = __webpack_require__(8);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	var Calendar = _react2["default"].createClass({
 	  displayName: "Calendar",
 
 	  mixins: [__webpack_require__(9)],
@@ -426,7 +461,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  getInitialState: function getInitialState() {
 	    return {
-	      date: new DateUtil(this.props.selected).safeClone(this.props.moment())
+	      date: new _utilDate2["default"](this.props.selected).safeClone(this.props.moment())
 	    };
 	  },
 
@@ -448,7 +483,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // When the selected date changed
 	    if (nextProps.selected !== this.props.selected) {
 	      this.setState({
-	        date: new DateUtil(nextProps.selected).clone()
+	        date: new _utilDate2["default"](nextProps.selected).clone()
 	      });
 	    }
 	  },
@@ -490,7 +525,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return;
 	    }
 
-	    return React.createElement(
+	    return _react2["default"].createElement(
 	      "div",
 	      { key: key },
 	      this.days(weekStart)
@@ -498,27 +533,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  renderDay: function renderDay(day, key) {
-	    var minDate = new DateUtil(this.props.minDate).safeClone(),
-	        maxDate = new DateUtil(this.props.maxDate).safeClone(),
+	    var minDate = new _utilDate2["default"](this.props.minDate).safeClone(),
+	        maxDate = new _utilDate2["default"](this.props.maxDate).safeClone(),
 	        excludeDates,
 	        disabled;
 
 	    if (this.props.excludeDates && Array.isArray(this.props.excludeDates)) {
-	      excludeDates = _(this.props.excludeDates).map(function (date) {
-	        return new DateUtil(date).safeClone();
+	      excludeDates = (0, _lodash2["default"])(this.props.excludeDates).map(function (date) {
+	        return new _utilDate2["default"](date).safeClone();
 	      });
 	    }
 
-	    disabled = day.isBefore(minDate) || day.isAfter(maxDate) || _(excludeDates).some(function (xDay) {
+	    disabled = day.isBefore(minDate) || day.isAfter(maxDate) || (0, _lodash2["default"])(excludeDates).some(function (xDay) {
 	      return day.sameDay(xDay);
 	    });
 
-	    return React.createElement(Day, {
+	    return _react2["default"].createElement(_day2["default"], {
 	      key: key,
 	      day: day,
 	      date: this.state.date,
 	      onClick: this.handleDayClick.bind(this, day),
-	      selected: new DateUtil(this.props.selected),
+	      selected: new _utilDate2["default"](this.props.selected),
 	      disabled: disabled });
 	  },
 
@@ -528,7 +563,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  header: function header() {
 	    return this.props.moment.weekdaysMin().map(function (day, key) {
-	      return React.createElement(
+	      return _react2["default"].createElement(
 	        "div",
 	        { className: "datepicker__day", key: key },
 	        day
@@ -537,29 +572,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  render: function render() {
-	    return React.createElement(
+	    return _react2["default"].createElement(
 	      "div",
 	      { className: "datepicker" },
-	      React.createElement("div", { className: "datepicker__triangle" }),
-	      React.createElement(
+	      _react2["default"].createElement("div", { className: "datepicker__triangle" }),
+	      _react2["default"].createElement(
 	        "div",
 	        { className: "datepicker__header" },
-	        React.createElement("a", { className: "datepicker__navigation datepicker__navigation--previous",
+	        _react2["default"].createElement("a", { className: "datepicker__navigation datepicker__navigation--previous",
 	          onClick: this.decreaseMonth }),
-	        React.createElement(
+	        _react2["default"].createElement(
 	          "span",
 	          { className: "datepicker__current-month" },
 	          this.state.date.localeFormat(this.props.locale, this.props.dateFormat)
 	        ),
-	        React.createElement("a", { className: "datepicker__navigation datepicker__navigation--next",
+	        _react2["default"].createElement("a", { className: "datepicker__navigation datepicker__navigation--next",
 	          onClick: this.increaseMonth }),
-	        React.createElement(
+	        _react2["default"].createElement(
 	          "div",
 	          null,
 	          this.header()
 	        )
 	      ),
-	      React.createElement(
+	      _react2["default"].createElement(
 	        "div",
 	        { className: "datepicker__month" },
 	        this.weeks()
@@ -576,10 +611,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 
-	var React = __webpack_require__(1);
-	var moment = __webpack_require__(7);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	var Day = React.createClass({
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _moment = __webpack_require__(7);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	var Day = _react2["default"].createClass({
 	  displayName: "Day",
 
 	  handleClick: function handleClick(event) {
@@ -600,13 +642,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    if (this.props.day.sameDay(this.props.selected)) classes.push("datepicker__day--selected");
 
-	    if (this.props.day.sameDay(moment())) classes.push("datepicker__day--today");
+	    if (this.props.day.sameDay((0, _moment2["default"])())) classes.push("datepicker__day--today");
 
 	    if (this.isWeekend()) {
 	      classes.push("datepicker__day--weekend");
 	    }
 
-	    return React.createElement(
+	    return _react2["default"].createElement(
 	      "div",
 	      { className: classes.join(" "), onClick: this.handleClick },
 	      this.props.day.day()
@@ -640,11 +682,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 
-	var React = __webpack_require__(1);
-	var DateUtil = __webpack_require__(4);
-	var moment = __webpack_require__(7);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	var DateInput = React.createClass({
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _utilDate = __webpack_require__(4);
+
+	var _utilDate2 = _interopRequireDefault(_utilDate);
+
+	var _moment = __webpack_require__(7);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	var DateInput = _react2["default"].createClass({
 	  displayName: "DateInput",
 
 	  getDefaultProps: function getDefaultProps() {
@@ -675,21 +727,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  toggleFocus: function toggleFocus(focus) {
 	    if (focus) {
-	      React.findDOMNode(this.refs.input).focus();
+	      _react2["default"].findDOMNode(this.refs.input).focus();
 	    } else {
-	      React.findDOMNode(this.refs.input).blur();
+	      _react2["default"].findDOMNode(this.refs.input).blur();
 	    }
 	  },
 
 	  handleChange: function handleChange(event) {
-	    var date = moment(event.target.value, this.props.dateFormat, true);
+	    var date = (0, _moment2["default"])(event.target.value, this.props.dateFormat, true);
 
 	    this.setState({
 	      value: event.target.value
 	    });
 
 	    if (date.isValid()) {
-	      this.props.setSelected(new DateUtil(date));
+	      this.props.setSelected(new _utilDate2["default"](date));
 	    } else if (event.target.value === "") {
 	      this.props.clearSelected();
 	    }
@@ -719,7 +771,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  render: function render() {
-	    return React.createElement("input", {
+	    return _react2["default"].createElement("input", {
 	      ref: "input",
 	      type: "text",
 	      name: this.props.name,
