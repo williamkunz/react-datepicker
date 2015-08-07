@@ -2,9 +2,10 @@ import React from 'react';
 import Day from "./day";
 import DateUtil from "./util/date";
 import _ from "lodash";
+import OnClickOutside from "react-onclickoutside";
 
 var Calendar = React.createClass( {
-  mixins: [ require( "react-onclickoutside" ) ],
+  mixins: [ OnClickOutside ],
 
   handleClickOutside: function() {
     this.props.hideCalendar();

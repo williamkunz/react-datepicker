@@ -1,14 +1,5 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("tether"), require("moment"), require("lodash"), require("react-onclickoutside"));
-	else if(typeof define === 'function' && define.amd)
-		define(["react", "tether", "moment", "lodash", "react-onclickoutside"], factory);
-	else if(typeof exports === 'object')
-		exports["DatePicker"] = factory(require("react"), require("tether"), require("moment"), require("lodash"), require("react-onclickoutside"));
-	else
-		root["DatePicker"] = factory(root["React"], root["Tether"], root["moment"], root["_"], root["OnClickOutside"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_8__, __WEBPACK_EXTERNAL_MODULE_9__) {
-return /******/ (function(modules) { // webpackBootstrap
+this["DatePicker"] =
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -236,7 +227,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
+	(function() { module.exports = this[undefined]; }());
 
 /***/ },
 /* 2 */
@@ -249,6 +240,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _tether = __webpack_require__(3);
+
+	var _tether2 = _interopRequireDefault(_tether);
 
 	var Popover = _react2["default"].createClass({
 	  displayName: "Popover",
@@ -302,8 +297,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (this._tether != null) {
 	      this._tether.setOptions(this._tetherOptions());
 	    } else if (window && document) {
-	      var Tether = __webpack_require__(3);
-	      this._tether = new Tether(this._tetherOptions());
+	      this._tether = new _tether2["default"](this._tetherOptions());
 	    }
 	  },
 
@@ -326,7 +320,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 3 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
+	(function() { module.exports = this[undefined]; }());
 
 /***/ },
 /* 4 */
@@ -450,10 +444,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
+	var _reactOnclickoutside = __webpack_require__(9);
+
+	var _reactOnclickoutside2 = _interopRequireDefault(_reactOnclickoutside);
+
 	var Calendar = _react2["default"].createClass({
 	  displayName: "Calendar",
 
-	  mixins: [__webpack_require__(9)],
+	  mixins: [_reactOnclickoutside2["default"]],
 
 	  handleClickOutside: function handleClickOutside() {
 	    this.props.hideCalendar();
@@ -662,19 +660,19 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_7__;
+	(function() { module.exports = this[undefined]; }());
 
 /***/ },
 /* 8 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_8__;
+	(function() { module.exports = this[undefined]; }());
 
 /***/ },
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_9__;
+	(function() { module.exports = this[undefined]; }());
 
 /***/ },
 /* 10 */
@@ -790,6 +788,4 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = DateInput;
 
 /***/ }
-/******/ ])
-});
-;
+/******/ ]);
