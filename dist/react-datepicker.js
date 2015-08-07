@@ -1,4 +1,4 @@
-this["DatePicker"] =
+this["require"] =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

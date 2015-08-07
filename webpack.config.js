@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/datepicker',
   output: {
     libraryTarget: 'this',
-    library: 'DatePicker',
+    library: 'require',
     path: './dist/'
   },
   module: {
